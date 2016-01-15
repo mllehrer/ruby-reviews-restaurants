@@ -1,0 +1,48 @@
+ h1 {
+  font-family: 'Nova Mono', 'Cutive Mono', monospace !important;
+  text-align: center;
+ }
+
+ h2 {
+  font-family: 'Nova Mono', 'Cutive Mono', monospace !important;
+ }
+
+
+ .logo {
+  height: 128px;
+  max-width: 100%;
+ }
+
+ #search-button {
+  margin-right: 1em;
+ }
+
+body {
+  margin-top: 1em;
+  font-family: 'Vollkorn', 'Playfair Display', serif !important;
+}
+
+.col-md-4 {
+  border: 1px solid pink;
+  background-color: grey;
+  height: 20em;
+}
+
+#map-container{
+  border: 2px solid pink;
+  background-color: lightgrey;
+  height: 40em;
+  padding: 2em
+}
+
+#map {
+  z-index: 9999;
+  height: 36em;
+  width: 51em;
+}
+
+.col-md-12 {
+  border: 1px solid pink;
+  background-color: lightgrey;
+  height: 100em;
+}

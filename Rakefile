@@ -30,6 +30,30 @@ namespace :generate do
     end
   end
 
+  desc "Create an empty validator in app/models, e.g., rake generate:validator NAME=email_validator"
+  task :validator do
+    unless ENV.has_key?('NAME')
+      raise "Must specificy validator name, e.g., rake generate:model NAME=email_validator"
+    end
+
+    validator_name     = ENV['NAME'].camelize
+    validator_filename = ENV['NAME'].underscore + '.rb'
+    validator_path = APP_ROOT.join('app', 'models', validator_filename)
+
+    if File.exist?(validator_path)
+      raise "ERROR: validator file '#{validator_path}' already exists"
+    end
+
+    puts "Creating #{validator_path}"
+    File.open(validator_path, 'w+') do |f|
+      f.write(<<-EOF.strip_heredoc)
+        class #{validator_name} < ActiveModel::Validator
+          #Remember to include this!
+        end
+      EOF
+    end
+  end
+
   desc "Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks"
   task :migration do
     unless ENV.has_key?('NAME')
