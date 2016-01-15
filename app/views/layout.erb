@@ -37,14 +37,16 @@
    <!--body font api-->
   <link href='https://fonts.googleapis.com/css?family=Vollkorn|Playfair+Display' rel='stylesheet' type='text/css'>
 
-
+   <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
 
   <title>Ruby Reviews Restaurants</title>
 </head>
 <body>
   <header>
-    <div class="container">
-      <header class="navbar navbar-default bs-docs-nav" role="banner">
+      <header class="navbar navbar-inverse bs-docs-nav" role="banner">
         <div class="container">
           <div class="navbar-header">
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -75,9 +77,7 @@
 
         <%= yield %>
         <footer>
-          <div class="container">
             Footer goes here
-          </div>
         </footer>
       </body>
       </html>

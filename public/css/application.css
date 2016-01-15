@@ -1,10 +1,11 @@
  h1 {
-  font-family: 'Nova Mono', 'Cutive Mono', monospace !important;
+  font-family: 'Nova Mono', 'Cutive Mono', monospace;
   text-align: center;
  }
 
  h2 {
-  font-family: 'Nova Mono', 'Cutive Mono', monospace !important;
+  font-family: 'Nova Mono', 'Cutive Mono', monospace;
+  color: #ffffff;
  }
 
 
@@ -19,17 +20,18 @@
 
 body {
   margin-top: 1em;
-  font-family: 'Vollkorn', 'Playfair Display', serif !important;
+  font-family: 'Vollkorn', 'Playfair Display', serif;
+  color: #ffffff;
 }
 
 .col-md-4 {
-  border: 1px solid pink;
-  background-color: grey;
+  border: 4px solid #ffea99;
+  background-color: #330000;
   height: 20em;
 }
 
 #map-container{
-  border: 2px solid pink;
+  border: 4px solid #ffea99;
   background-color: lightgrey;
   height: 40em;
   padding: 2em
@@ -42,7 +44,7 @@ body {
 }
 
 .col-md-12 {
-  border: 1px solid pink;
-  background-color: lightgrey;
+  border: 4px solid #ffea99;
+  background-color: #330000;
   height: 100em;
 }
