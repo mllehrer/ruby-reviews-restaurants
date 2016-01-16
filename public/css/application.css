@@ -1,3 +1,5 @@
+
+
  h1 {
   font-family: 'Nova Mono', 'Cutive Mono', monospace;
   text-align: center;
@@ -8,6 +10,13 @@
   color: #ffffff;
  }
 
+.container {
+  width: 1170px;
+}
+
+.navbar {
+  width: 100%;
+}
 
  .logo {
   height: 128px;
@@ -17,6 +26,11 @@
  #search-button {
   margin-right: 1em;
  }
+
+.signature {
+  font-family: font-family: 'Lobster', 'Pacifico', cursive;
+  font-size: 1.5em;
+}
 
 body {
   margin-top: 1em;
@@ -33,18 +47,48 @@ body {
 #map-container{
   border: 4px solid #ffea99;
   background-color: lightgrey;
-  height: 40em;
+  height: 30em;
   padding: 2em
 }
 
 #map {
   z-index: 9999;
-  height: 36em;
-  width: 51em;
+  height: 26em;
 }
 
 .col-md-12 {
   border: 4px solid #ffea99;
   background-color: #330000;
-  height: 100em;
+  max-width: 100%;
+  height: 100%;
+}
+
+.post-heading {
+  font-family: 'Vollkorn', 'Playfair Display', serif;
+}
+
+.post-image {
+  max-height: 417px;
+  max-width: 100%;
+}
+
+#review-container {
+  margin: auto;
+  padding: 2em;
+}
+
+#pages {
+    display: none;
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    opacity: .8;
+    background-color: #FFFFFF;
 }

@@ -17,6 +17,8 @@ gem 'shotgun'
 gem 'faker'
 gem 'bcrypt'
 
+gem 'bootstrap-sass', '~> 3.0.3.0'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
