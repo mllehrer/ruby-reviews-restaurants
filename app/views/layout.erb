@@ -34,17 +34,26 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!--header font api-->
   <link href='https://fonts.googleapis.com/css?family=Cutive+Mono|Nova+Mono' rel='stylesheet' type='text/css'>
+
+  <!--signature font api-->
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
    <!--body font api-->
   <link href='https://fonts.googleapis.com/css?family=Vollkorn|Playfair+Display' rel='stylesheet' type='text/css'>
 
 
+   <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
 
   <title>Ruby Reviews Restaurants</title>
 </head>
 <body>
   <header>
-    <div class="container">
-      <header class="navbar navbar-default bs-docs-nav" role="banner">
+    <div class="col-md-12">
+      <header class="navbar navbar-inverse bs-docs-nav" role="banner">
         <div class="container">
           <div class="navbar-header">
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -75,9 +84,7 @@
 
         <%= yield %>
         <footer>
-          <div class="container">
             Footer goes here
-          </div>
         </footer>
       </body>
       </html>

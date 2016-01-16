@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   include BCrypt
-  include ActiveModel::Validations
-  validates_with KeyValidator
+#   include ActiveModel::Validators
+#   validates_with KeyValidator
   has_many :reviews
 
   validates :username, uniqueness: true

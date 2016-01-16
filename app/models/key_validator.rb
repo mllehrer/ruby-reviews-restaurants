@@ -1,4 +1,4 @@
-class KeyValidator < ActiveModel::Validator
+class KeyValidator < ActiveModel::Validators
   #Remember to include this!
   def validate(registration_key)
     unless registration_key == "#{username}isallowed"
