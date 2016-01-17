@@ -1,0 +1,31 @@
+<div class="form-container">
+<form id="review-form" method="POST" action="/reviews">
+<input name="review_title" placeholder="review title">
+<input name="image" placeholder="image url">
+<input name="restaurant_name" placeholder="restaurant name">
+<input name="latitude" placeholder="latitude">
+<input name="longitude" placeholder="longitude">
+ <label for="rating">rating</label>
+   <select name="rating">
+   <option value="1">1</option>
+   <option value="2">2</option>
+   <option value="3">3</option>
+   <option value="4">4</option>
+   <option value="5">5</option>
+ </select>
+ <label for="price">price</label>
+   <select name="price">
+   <option value="$">$</option>
+   <option value="$$">$$</option>
+   <option value="$$$">$$$</option>
+   <option value="$$$$">$$$$</option>
+ </select>
+<br>
+<textarea rows="7" cols="85" name="review_content" placeholder="Write your review here"></textarea><br>
+<input name="signature" placeholder="signature">
+<input name="tag1" placeholder="tag">
+<input name="tag2" placeholder="tag">
+<input name="tag2" placeholder="tag">
+<input type="submit">
+</form>
+</div>

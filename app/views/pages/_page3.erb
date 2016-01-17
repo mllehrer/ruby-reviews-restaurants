@@ -1,0 +1,29 @@
+<div id="contact-form" class="clearfix">
+<!--http://code.tutsplus.com/tutorials/build-a-neat-html5-powered-contact-form--net-20426-->
+
+<h2>Contact Ruby</h2>
+<ul id="errors" class="">
+  <li id="info">Uh-oh, looks like that didn't go! Please try again.</li>
+</ul>
+<p id="success">Thanks for reaching out! I'll be in touch.</p>
+<form method="post" action=''>
+  <label for="name">Name: <span class="required">*</span></label>
+        <input type="text" id="name" name="name" value="" placeholder="Your Name" required="required" autofocus="autofocus" />
+
+        <label for="email">Email Address: <span class="required">*</span></label>
+        <input type="email" id="email" name="email" value="" placeholder="email@example.com" required="required" />
+
+        <label for="enquiry">What's up?</label>
+        <select id="enquiry" name="enquiry">
+            <option value="employer">I want to hire you!</option>
+            <option value="friend">This is great!</option>
+            <option value="enemy">Your reviews are THE WORST.</option>
+        </select>
+
+        <label for="message">Message: <span class="required">*</span></label>
+        <textarea id="message" name="message" placeholder="Looking forward to hearing from you, unless what you have to say is terrible!"></textarea>
+
+        <span id="loading"></span>
+        <input type="submit" value="Hey Ruby!" id="submit-button"/>
+</form>
+

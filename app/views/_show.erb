@@ -1,0 +1,15 @@
+<h2 class="post-heading"><%=@review.restaurant_name%>: <%=@review.review_title%></h2><br>
+      <img src="<%=@review.image%>"></img><br>
+      <em><%=@review.created_at.to_s(format = :long)%></em><br>
+      <p>Rating: <%=@review.rating%>/5 Price: <%=@review.price%></p>
+      <p><%=@review.review_content%></p>
+      <br>
+      <br>
+      <p class="signature"><%=@review.signature%></p>
+      <em>Tags: <%=@review.tag1%>, <%=@review.tag2%>, <%=@review.tag3%></em>
+      <%if session[:user_id]%>
+      <form id="delete_form" action='/reviews/<%=@review.id%>' method='post'>
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="delete">
+      </form>
+      <%end%>

@@ -23,8 +23,8 @@ function initialize() {
     var marker = new google.maps.Marker({
       position: markerLoc,
       map: map,
-      title: restaurant.restaurant_name
-    });
+      title: restaurant.restaurant_name, visible:true
+      });
   };
 
 
