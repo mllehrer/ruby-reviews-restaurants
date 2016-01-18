@@ -4,7 +4,7 @@ get '/' do
 end
 
 post '/reviews' do
-  @review = Review.create(review_title: params[:review_title], image: params[:image], restaurant_name: params[:restaurant_name], latitude: params[:latitude], longitude: params[:longitude], rating: params[:rating], price: params[:price], review_content: params[:review_content], signature: params[:signature], tag1: params[:tag1], tag2: params[:tag2], tag3: params[:tag3])
+  @review = Review.create(user_id: session[:user_id], review_title: params[:review_title], image: params[:image], restaurant_name: params[:restaurant_name], latitude: params[:latitude], longitude: params[:longitude], rating: params[:rating], price: params[:price], review_content: params[:review_content], signature: params[:signature], tag1: params[:tag1], tag2: params[:tag2], tag3: params[:tag3])
   if @review.save
     "Yay!"
   else
@@ -25,6 +25,14 @@ get '/page3' do
   @reviews = Review.all
    erb :'pages/_page3', layout: false
  end
+
+# post '/contact' do
+# mail = Mail.new do
+#   from 'mia.lehrer@gmail.com'
+#   to params[:email]
+#   subject params[:enquiry]
+#   body params[:message])
+# end
 
 get '/location' do
   @restaurants = Review.all
@@ -77,6 +85,7 @@ delete '/reviews/:id' do
   @review.destroy
   redirect "/"
 else
+  p "#{@review.user_id} should be #{session[:user_id]}"
   erb :effoff
 end
 end

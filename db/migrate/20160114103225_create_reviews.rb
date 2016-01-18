@@ -1,6 +1,7 @@
 class CreateReviews < ActiveRecord::Migration
   def change
     create_table :reviews do |t|
+      t.references :user
       t.string :review_title, null: :false
       t.string :image
       t.string :restaurant_name, null: :false

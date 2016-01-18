@@ -18,6 +18,7 @@ gem 'faker'
 gem 'bcrypt'
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'mail'
 
 group :test do
   gem 'shoulda-matchers'
