@@ -6,7 +6,7 @@ end
 post '/reviews' do
   @review = Review.create(user_id: session[:user_id], review_title: params[:review_title], image: params[:image], restaurant_name: params[:restaurant_name], latitude: params[:latitude], longitude: params[:longitude], rating: params[:rating], price: params[:price], review_content: params[:review_content], signature: params[:signature], tag1: params[:tag1], tag2: params[:tag2], tag3: params[:tag3])
   if @review.save
-    "Yay!"
+    redirect "/"
   else
     erb :effoff
   end
