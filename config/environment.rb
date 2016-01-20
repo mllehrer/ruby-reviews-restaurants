@@ -14,7 +14,8 @@ require 'sinatra'
 require 'pg'
 require 'active_record'
 require 'logger'
-# require 'mail'
+require 'mail'
+require 'pony'
 
 require "sinatra/reloader" if development?
 require 'bcrypt'

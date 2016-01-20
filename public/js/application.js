@@ -1,6 +1,7 @@
 $(document).ready(function() {
   initialize();
   infiniteScroll();
+  respondEmail();
 
 });
 
@@ -102,3 +103,19 @@ function infiniteScroll(){
     }
   }
 }
+
+//email form
+var respondEmail = function(){
+  $(document.body).on('submit', '#contact-form-id', function(e){
+    console.log("hey")
+    e.preventDefault();
+    appendThanks(this)
+  })
+};
+
+var appendThanks = function(){
+  $.post("/contact", emailData)
+  .done(function(thanksMessage){
+    $("#contact-form").prepend(thanksMessage)
+  })
+};

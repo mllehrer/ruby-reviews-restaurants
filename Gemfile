@@ -19,6 +19,7 @@ gem 'bcrypt'
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'mail'
+gem 'pony', '~> 1.11'
 
 group :test do
   gem 'shoulda-matchers'

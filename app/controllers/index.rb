@@ -26,13 +26,17 @@ get '/page3' do
    erb :'pages/_page3', layout: false
  end
 
-# post '/contact' do
-# mail = Mail.new do
-#   from 'mia.lehrer@gmail.com'
-#   to params[:email]
-#   subject params[:enquiry]
-#   body params[:message])
-# end
+post '/contact' do
+  @email = params[:email]
+  @enquiry = params[:enquiry]
+  @body = params[:body]
+  Pony.mail(to: 'mia.lehrer@gmail.com', from: @email, subject: @enquiry, body: @body)
+    if request.xhr?
+  "Thanks! I'll be in touch!"
+    else
+  redirect '/'
+    end
+end
 
 get '/location' do
   @restaurants = Review.all
