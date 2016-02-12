@@ -1,2 +1,2 @@
 # ruby-reviews-restaurants
-A restaurant review blog with map API.
+A simple restaurant-review blog in Sinatra that uses the google maps API to keep track of review locations.
