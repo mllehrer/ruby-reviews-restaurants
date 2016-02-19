@@ -1,2 +1,5 @@
 # ruby-reviews-restaurants
-A simple restaurant-review blog in Sinatra that uses the google maps API to keep track of review locations.
+
+A little Sinatra blog I made for myself in an afternoon, should I ever get around to filling it up. The map up top auto-populates when new reviews are added and will show reviews near you.
+
+Check it out on (https://mysterious-citadel-32475.herokuapp.com/ "Heroku")
